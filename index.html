@@ -1,27 +1,565 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ricardo Estepa · Project Manager</title>
+  <!-- Favicon -->
+  <link rel="icon" href="assets\images\favicon.png" type="image/x-icon">
+  <!-- Google Fonts - Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- Google Fonts - Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+  </style>
+</head>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1 class="text-center mt-5 display-4 text-primary">Hello, Milton!</h1>
+<body class="language-en">
+  <!-- Header with language switch -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">Ricardo Estepa</a>
+        <div class="language-switch">
+          <button class="language-btn active" onclick="switchLanguage('en')">English</button>
+          <button class="language-btn" onclick="switchLanguage('es')">Español</button>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <img src="assets\images\profile.jpg" alt="Ricardo Estepa" class="profile-img">
+        <h1>Ricardo Alonso Estepa Estupiñán</h1>
+        <p class="en">I lead cross-functional projects that not only solve complex problems but also transform the way
+          businesses operate, driving their impact and scalability.</p>
+        <p class="es">Lidero proyectos multifuncionales que no solo resuelven problemas complejos, sino que también
+          transforman la manera en que los negocios operan, impulsando su impacto y escalabilidad.</p>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/rieux" class="social-link" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:sir.ransbach@gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="https://wa.me/573015087353" class="social-link">
+            <i class="fas fa-phone"></i> Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-  </body>
+  <!-- Profile section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title en">Professional Profile</h2>
+      <h2 class="section-title es">Perfil Profesional</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <p class="en">
+            Passionate about leading technology projects from vision to delivery, bringing cross-functional
+            teams together to create products that truly matter. With extensive experience integrating
+            advanced technology strategies to design products that combine efficiency, usability, and
+            measurable results. <br></br>
+          </p>
+          <p class="en">
+            My expertise spans user research, UX/UI design, data analytics, and AI-driven optimization,
+            backed by knowledge of platforms such as AWS, GitHub, and Google Analytics. <br></br>
+          </p>
+          <p class="en">
+            My focus is always on bridging technology and user experience to ensure that every solution
+            delivers tangible and lasting value.
+          </p>
+
+          <p class="es">
+            Apasionado por liderar proyectos tecnológicos desde la visión hasta la entrega, uniendo equipos
+            multifuncionales para crear productos que realmente importan. Con amplia experiencia
+            integrando estrategias tecnológicas avanzadas para diseñar productos que combinan eficiencia,
+            usabilidad y resultados medibles. <br></br>
+          </p>
+          <p class="es">
+            Mi conocimiento abarca desde investigación de usuarios y diseño UX/UI hasta analítica de datos
+            y optimización basada en IA, respaldado por el conocimiento de plataformas como AWS, GitHub
+            y Google Analytics. <br></br>
+          </p>
+          <p class="es">
+            Mi enfoque está siempre en unir tecnología y experiencia de usuario para garantizar que cada
+            solución entregue un valor tangible y sostenido en el tiempo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title en">Skills</h2>
+      <h2 class="section-title es">Habilidades</h2>
+
+      <div class="skills-container">
+        <span class="skill">Agile methodologies</span>
+        <span class="skill">Development process optimization</span>
+        <span class="skill">Frontend and backend system integration</span>
+        <span class="skill">User analysis and research</span>
+        <span class="skill">New product launch</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title en">Experience</h2>
+      <h2 class="section-title es">Experiencia</h2>
+
+      <div class="timeline">
+        <!-- Floloop Experience -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-title">Software Project Manager</h3>
+              <div class="timeline-company">Floloop</div>
+              <div class="timeline-location">Las Vegas, Nevada, USA</div>
+            </div>
+            <div class="timeline-date">
+              <span class="en">Nov 2024 - Present</span>
+              <span class="es">Nov 2024 - Presente</span>
+            </div>
+          </div>
+
+          <div class="timeline-content">
+            <div class="en">
+              <div class="timeline-section-title">Responsibilities:</div>
+              <ul class="timeline-list">
+                <li>Lead the creation and enhancement of automation and growth tools that optimize business efficiency
+                  for our clients, with a focus on integrated platforms.</li>
+                <li>Define and execute the product roadmap from ideation to launch, ensuring that new features meet
+                  market demands and specific client needs.</li>
+              </ul>
+
+              <div class="timeline-section-title">Achievements:</div>
+              <ul class="timeline-list">
+                <li>Gather user insights and client requirements.</li>
+                <li>Verify and validate that the web application meets specifications and functions correctly.</li>
+              </ul>
+            </div>
+
+            <div class="es">
+              <div class="timeline-section-title">Funciones:</div>
+              <ul class="timeline-list">
+                <li>Liderar la creación y mejora de herramientas de automatización y crecimiento que optimicen la
+                  eficiencia de los negocios de nuestros clientes, con un enfoque en plataformas integradas.</li>
+                <li>Definir y ejecutar la hoja de ruta de producto desde la ideación hasta el lanzamiento, garantizando
+                  que las nuevas funcionalidades respondan a las demandas del mercado y las necesidades específicas de
+                  los clientes.</li>
+              </ul>
+
+              <div class="timeline-section-title">Logros:</div>
+              <ul class="timeline-list">
+                <li>Recopilo información de uso y necesidades de nuestros clientes.</li>
+                <li>Verifico y valido que la aplicación web cumpla con los requisitos y funcione correctamente.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wava Experience -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-title">Product Manager</h3>
+              <div class="timeline-company">Wava</div>
+              <div class="timeline-date">
+                <span class="en">Mar 2022 - Sep 2024</span>
+                <span class="es">Mar 2022 - Sep 2024</span>
+              </div>
+            </div>
+            <div class="timeline-date">Mar 2022 - Sep 2024</div>
+          </div>
+
+          <div class="timeline-content">
+            <div class="en">
+              <div class="timeline-section-title">Responsibilities:</div>
+              <ul class="timeline-list">
+                <li>Collect and analyze user metrics to identify improvement opportunities, drive tool adoption, and
+                  ensure maximum value in every update.</li>
+                <li>Coordinate with technology, sales, and marketing teams to launch highly scalable products while
+                  keeping customer satisfaction a top priority.</li>
+              </ul>
+
+              <div class="timeline-section-title">Achievements:</div>
+              <ul class="timeline-list">
+                <li>Designed the web user experience for the payment process.</li>
+                <li>Defined the design system for the entire web payment experience.</li>
+                <li>Ensured the integration of Stripe, Nequi, and DaviPlata as available payment methods.</li>
+              </ul>
+            </div>
+
+            <div class="es">
+              <div class="timeline-section-title">Funciones:</div>
+              <ul class="timeline-list">
+                <li>Recopilar y analizar métricas de usuario para identificar oportunidades de mejora, impulsar la
+                  adopción de herramientas y asegurar el máximo valor en cada actualización.</li>
+                <li>Coordinar con equipos de tecnología, ventas y marketing para lanzar productos altamente escalables y
+                  mantener la satisfacción del cliente en primer lugar.</li>
+              </ul>
+
+              <div class="timeline-section-title">Logros:</div>
+              <ul class="timeline-list">
+                <li>Elaboré la experiencia de usuario web para el proceso de pago.</li>
+                <li>Definí el sistema de diseño para toda la experiencia de pago web.</li>
+                <li>Aseguré la integración de Stripe, Nequi y DaviPlata como medios de pago disponibles.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cosmic Experience -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-title">Product Manager</h3>
+              <div class="timeline-company">Cosmic</div>
+              <div class="timeline-location">Bogotá, Colombia</div>
+            </div>
+            <div class="timeline-date">
+              <span class="en">Feb 2018 - Aug 2021</span>
+              <span class="es">Feb 2018 - Ago 2021</span>
+            </div>
+          </div>
+
+          <div class="timeline-content">
+            <div class="en">
+              <div class="timeline-section-title">Responsibilities:</div>
+              <ul class="timeline-list">
+                <li>Oversee the integration of hardware and software in electric vehicle fleets.</li>
+                <li>Analyze operational data to optimize routes and vehicle availability.</li>
+                <li>Implement strategies to enhance the user experience in mobile apps.</li>
+              </ul>
+
+              <div class="timeline-section-title">Achievements:</div>
+              <ul class="timeline-list">
+                <li>Oversaw the release of user and logistics apps on the Play Store and App Store.</li>
+                <li>Designed the mobile and web user experience for the apps and the admin panel.</li>
+                <li>Coordinated the launch of fleets in Colombia, Peru, Argentina, Chile, Canada, Italy, and Saudi
+                  Arabia.</li>
+              </ul>
+            </div>
+
+            <div class="es">
+              <div class="timeline-section-title">Funciones:</div>
+              <ul class="timeline-list">
+                <li>Supervisar la integración de hardware y software en las flotas de vehículos eléctricos.</li>
+                <li>Analizar los datos operativos para optimizar las rutas y disponibilidad de vehículos.</li>
+                <li>Implementar estrategias para mejorar la experiencia de usuario en las aplicaciones móviles.</li>
+              </ul>
+
+              <div class="timeline-section-title">Logros:</div>
+              <ul class="timeline-list">
+                <li>Supervisé la publicación de las apps de usuario y logística en la Play Store y la App Store.</li>
+                <li>Diseñé la experiencia de usuario móvil y web de las app y el panel de administración.</li>
+                <li>Coordiné el lanzamiento de las flotas en Colombia, Perú, Argentina, Chile, Canadá, Italia y Arabia
+                  Saudita.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- City of Eden Experience -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-title en">Design Engineer</h3>
+              <h3 class="timeline-title es">Ingeniero de diseño</h3>
+              <div class="timeline-company">City of Eden</div>
+              <div class="timeline-location">Bogotá, Colombia</div>
+            </div>
+            <div class="timeline-date">
+              <span class="en">Nov 2017 - Feb 2018</span>
+              <span class="es">Nov 2017 - Feb 2018</span>
+            </div>
+          </div>
+
+          <div class="timeline-content">
+            <div class="en">
+              <div class="timeline-section-title">Responsibilities:</div>
+              <ul class="timeline-list">
+                <li>Design and management of manufacturing operations.</li>
+                <li>Development and administration through computer-aided manufacturing (CAM).</li>
+                <li>Prototype production and specification development for product evaluation.</li>
+              </ul>
+
+              <div class="timeline-section-title">Achievements:</div>
+              <ul class="timeline-list">
+                <li>Coordinated the manufacturing of equipment for Motorola's headquarters in Israel.</li>
+                <li>Developed the prototype of a product currently in the patent process in the U.S.</li>
+              </ul>
+            </div>
+
+            <div class="es">
+              <div class="timeline-section-title">Funciones:</div>
+              <ul class="timeline-list">
+                <li>Diseño y dirección de operaciones de manufactura.</li>
+                <li>Desarrollo y gestión mediante fabricación asistida por computador (CAM).</li>
+                <li>Producción de prototipos y especificaciones para la evaluación de productos.</li>
+              </ul>
+
+              <div class="timeline-section-title">Logros:</div>
+              <ul class="timeline-list">
+                <li>Coordiné la fabricación de equipos destinados a la sede de Motorola en Israel.</li>
+                <li>Desarrollé el prototipo de un producto que se encuentra en proceso de patente en EE. UU.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title en">Education & Certifications</h2>
+      <h2 class="section-title es">Educación y Certificaciones</h2>
+
+      <div class="education-container">
+        <!-- Chatbot development with OpenAI -->
+        <div class="education-item">
+          <a href="https://platzi.com/p/Rieux/curso/8022-openai-api-23/diploma/detalle/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Feb 2025</span>
+            <span class="es">Feb 2025</span>
+          </div>
+          <h3 class="education-title en">Chatbot development with OpenAI</h3>
+          <h3 class="education-title es">Desarrollo de Chatbots con OpenAI</h3>
+          <div class="education-institution">Platzi</div>
+        </div>
+
+        <!-- AI Agents -->
+        <div class="education-item">
+          <a href="https://platzi.com/p/Rieux/curso/10794-agentes-ai/diploma/detalle/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Feb 2025</span>
+            <span class="es">Feb 2025</span>
+          </div>
+          <h3 class="education-title en">AI Agents</h3>
+          <h3 class="education-title es">Agentes IA</h3>
+          <div class="education-institution">Platzi</div>
+        </div>
+
+        <!-- Tableau -->
+        <div class="education-item">
+          <a href="https://platzi.com/p/Rieux/curso/2197-tableau/diploma/detalle/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Oct 2024</span>
+            <span class="es">Oct 2024</span>
+          </div>
+          <h3 class="education-title en">Tableau: Data Visualization and Storytelling for Business</h3>
+          <h3 class="education-title es">Tableau: Visualización de Datos y Storytelling para Negocios</h3>
+          <div class="education-institution">Platzi</div>
+        </div>
+
+        <!-- SQL -->
+        <div class="education-item">
+          <a href="https://platzi.com/p/Rieux/curso/9873-db-sql/diploma/detalle/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Jul 2024</span>
+            <span class="es">Jul 2024</span>
+          </div>
+          <h3 class="education-title en">Databases with SQL</h3>
+          <h3 class="education-title es">Bases de Datos con SQL</h3>
+          <div class="education-institution">Platzi</div>
+        </div>
+
+        <!-- Google Data Studio -->
+        <div class="education-item">
+          <a href="https://platzi.com/p/Rieux/curso/1838-data-studio/diploma/detalle/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Jun 2024</span>
+            <span class="es">Jub 2024</span>
+          </div>
+          <h3 class="education-title en">Google Data Studio</h3>
+          <h3 class="education-title es">Google Data Studio</h3>
+          <div class="education-institution">Platzi</div>
+        </div>
+
+        <!-- Metrics -->
+        <div class="education-item">
+          <a href="https://platzi.com/p/Rieux/curso/2294-dashboards-startups/diploma/detalle/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Apr 2024</span>
+            <span class="es">Abr 2024</span>
+          </div>
+          <h3 class="education-title en">Metrics and Dashboards for Startups</h3>
+          <h3 class="education-title es">Métricas y Dashboards para Startups</h3>
+          <div class="education-institution">Platzi</div>
+        </div>
+
+        <!-- Looker -->
+        <div class="education-item">
+          <a href="https://platzi.com/p/Rieux/curso/8046-reportes-looker/diploma/detalle/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Feb 2024</span>
+            <span class="es">Feb 2024</span>
+          </div>
+          <h3 class="education-title en">Social Media Report Generation with Looker Studio</h3>
+          <h3 class="education-title es">Generación de Reportes de Redes Sociales con Looker Studio</h3>
+          <div class="education-institution">Platzi</div>
+        </div>
+
+        <!-- GitHub -->
+        <div class="education-item">
+          <a href="https://platzi.com/p/Rieux/curso/1557-git-github/diploma/detalle/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Jan 2024</span>
+            <span class="es">Ene 2024</span>
+          </div>
+          <h3 class="education-title en">Git & GitHub</h3>
+          <h3 class="education-title es">Git & GitHub</h3>
+          <div class="education-institution">Platzi</div>
+        </div>
+
+        <!-- User Research -->
+        <div class="education-item">
+          <a href="https://platzi.com/p/Rieux/curso/1742-user-research/diploma/detalle/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Nov 2022</span>
+            <span class="es">Nov 2022</span>
+          </div>
+          <h3 class="education-title en">User Research: Techniques for Effective Investigation</h3>
+          <h3 class="education-title es">User Research: Técnicas para una Investigación Efectiva</h3>
+          <div class="education-institution">Platzi</div>
+        </div>
+
+        <!-- Design Systems -->
+        <div class="education-item">
+          <a href="https://platzi.com/p/Rieux/curso/1420-sistemas-diseno/diploma/detalle/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Jan 2022</span>
+            <span class="es">Ene 2022</span>
+          </div>
+          <h3 class="education-title en">Design Systems</h3>
+          <h3 class="education-title es">Sistemas de diseño</h3>
+          <div class="education-institution">Platzi</div>
+        </div>
+
+        <!-- Figma -->
+        <div class="education-item">
+          <a href="https://platzi.com/p/Rieux/curso/2582-figma-avanzado/diploma/detalle/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Dec 2021</span>
+            <span class="es">Dic 2021</span>
+          </div>
+          <h3 class="education-title en">Figma: Design and Prototyping</h3>
+          <h3 class="education-title es">Figma Avanzado</h3>
+          <div class="education-institution">Platzi</div>
+        </div>
+
+        <!-- Bachelor's Degree -->
+        <div class="education-item">
+          <a href="https://uptc.edu.co/" target="_blank">
+            <i class="education-icon fas fa-external-link-alt"></i>
+          </a>
+          <div class="education-date">
+            <span class="en">Abr 2015</span>
+            <span class="es">Abr 2015</span>
+          </div>
+          <h3 class="education-title en">Bachelor's Degree in Electromechanical Engineering</h3>
+          <h3 class="education-title es">Pregrado Ingeniería electromecánica</h3>
+          <div class="education-institution">UPTC</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll to Top of the page -->
+  <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    /*  Switch language to English or Spanish  */
+    function switchLanguage(lang) {
+      // Cambiar clase en body
+      document.body.className = 'language-' + lang;
+
+      // Update active buttons
+      document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang));
+      });
+    }
+
+    /*  Scroll to Top */
+    const scrollToTopButton = document.getElementById('scrollToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollToTopButton.style.display = 'flex'; // Show the button
+      } else {
+        scrollToTopButton.style.display = 'none'; // Hide the button
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scrolling
+      });
+    }
+
+    /*  Detect language on page load */
+    function detectLanguage() {
+      const userLang = navigator.language || navigator.userLanguage; // Get browser language
+      const lang = userLang.startsWith('es') ? 'es' : 'en'; // Set ES if Spanish, else EN
+
+      // Change class in body to match the detected language
+      document.body.className = 'language-' + lang;
+
+      // Update active buttons
+      document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang));
+      });
+    }
+
+    // Call the function on page load
+    window.onload = detectLanguage;
+  </script>
+</body>
+
 </html>
