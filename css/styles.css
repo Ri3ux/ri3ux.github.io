@@ -53,14 +53,15 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--light-text);
-            text-decoration: none;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            width: 40px;
+            height: auto;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .language-switch {
@@ -212,6 +213,7 @@
             padding: 0.75rem 1.5rem;
             border-radius: calc(infinity * 1px);
             font-weight: 500;
+            text-align: center;
             border: 1px solid transparent;
             background-image: linear-gradient(var(--dark-bg), var(--dark-bg)), linear-gradient(135deg, var(--magenta-bg), var(--cyan-bg), var(--green-bg));
             background-origin: border-box;
@@ -458,22 +460,23 @@
             border: 1px solid var(--gray-text);
             border-radius: 50%;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            display: none; /* Oculto por defecto */
+            display: none;
+            /* Oculto por defecto */
             justify-content: center;
             align-items: center;
             cursor: pointer;
             z-index: 1000;
             transition: all 0.3s ease;
-          }
-          
-          .scroll-to-top i {
+        }
+
+        .scroll-to-top i {
             font-size: 1.5rem;
-          }
-          
-          .scroll-to-top:hover {
+        }
+
+        .scroll-to-top:hover {
             background-color: var(--secondary-color);
             transform: translateY(-5px);
-          }
+        }
 
         /* --- Footer --- */
         footer {
