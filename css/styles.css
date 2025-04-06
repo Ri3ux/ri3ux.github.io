@@ -1,3 +1,44 @@
+/* ==========================
+   VARIABLES GLOBALES
+========================== */
+:root {
+    --primary-color: #EAEAEA;
+    --secondary-color: #FFFFFF;
+    --dark-bg: #101010;
+    --card-bg: #292a2b;
+    --dark-text: #1E1E1E;
+    --light-text: #F9FAFB;
+    --gray-text: #A0A0A0;
+    --green-bg: #A7FC8F;
+    --cyan-bg: #59B2EA;
+    --magenta-bg: #E131F3;
+    --border-color: #333333;
+    --hover-color: #1f2225;
+    --highlight-text: #60A5FA
+}
+
+/* ==========================
+   REGLAS GENERALES
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter, sans-serif;
+    color: var(--light-text);
+    line-height: 1.6;
+    background-color: var(--dark-bg)
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem
+}
+
 .hero h1,
 .language-btn.active {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color))
@@ -33,44 +74,12 @@ footer {
     display: block
 }
 
-:root {
-    --primary-color: #EAEAEA;
-    --secondary-color: #FFFFFF;
-    --dark-bg: #101010;
-    --card-bg: #292a2b;
-    --dark-text: #1E1E1E;
-    --light-text: #F9FAFB;
-    --gray-text: #A0A0A0;
-    --green-bg: #A7FC8F;
-    --cyan-bg: #59B2EA;
-    --magenta-bg: #E131F3;
-    --border-color: #333333;
-    --hover-color: #1f2225;
-    --highlight-text: #60A5FA
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-}
-
-body {
-    font-family: Inter, sans-serif;
-    color: var(--light-text);
-    line-height: 1.6;
-    background-color: var(--dark-bg)
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem
-}
-
+/* ==========================
+   HEADER
+========================== */
 header {
-    background-color: rgba(20, 20, 20, .9);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    background-color: #141414e6;
+    box-shadow: 0 1px 3px #0000004d;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -95,6 +104,9 @@ header {
     height: auto
 }
 
+/* ==========================
+   BOTONES DE IDIOMA
+========================== */
 .language-btn {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -117,6 +129,9 @@ header {
     transform: translateY(-2px)
 }
 
+/* ==========================
+   HERO SECTION
+========================== */
 .hero {
     padding: 5rem 0;
     background-image: radial-gradient(circle at 50% 0, rgba(78, 150, 255, .15), transparent 50%);
@@ -171,6 +186,9 @@ header {
     box-shadow: 0 0 25px rgba(78, 150, 255, .3)
 }
 
+/* ==========================
+   SOCIAL LINKS
+========================== */
 .social-links {
     justify-content: center;
     margin-top: 2rem
@@ -191,19 +209,22 @@ header {
     border-color: var(--primary-color)
 }
 
-.section-title,
-.section-title::after {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color))
-}
-
 .social-link i {
     margin-right: .5rem;
     color: var(--primary-color)
 }
 
+/* ==========================
+SECCIONES GENERALES
+========================== */
 .section {
     padding: 5rem 0;
     border-bottom: 1px solid var(--border-color)
+}
+
+.section-title,
+.section-title::after {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color))
 }
 
 .section:last-child {
@@ -499,6 +520,9 @@ footer {
     font-size: .875rem
 }
 
+/* ==========================
+   MEDIA QUERIES
+========================== */
 @media (max-width:768px) {
     .hero h1 {
         font-size: 2.5rem
