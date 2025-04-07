@@ -7,19 +7,19 @@
   <!-- Google Console -->
   <meta name="google-site-verification" content="H-K_3ZVRAimi9IOGRY6GHDd5hXzsxISm5Az_QVjlS3E" />
   <!-- Open Graph meta tags -->
-  <meta property="og:title" content="Ricardo Estepa · Project Manager">
+  <meta property="og:title" content="Ricardo Estepa | Project Manager">
   <meta property="og:description"
     content="A skilled Project Manager with expertise in leading cross-functional teams and optimizing business processes.">
-  <meta property="og:image" content="https://ri3ux.github.io/thumbnail.png">
+  <meta property="og:image" content="https://ri3ux.github.io/assets/images/thumbnail.png">
   <meta property="og:url" content="https://ri3ux.github.io/">
   <meta property="og:image:alt" content="Project Manager">
   <meta property="og:type" content="website">
   <!-- Twitter Card meta tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ricardo Estepa · Project Manager">
+  <meta name="twitter:title" content="Ricardo Estepa | Project Manager">
   <meta name="twitter:description"
     content="A skilled Project Manager with expertise in leading cross-functional teams and optimizing business processes.">
-  <meta name="twitter:image" content="https://ri3ux.github.io/thumbnail.png">
+  <meta name="twitter:image" content="https://ri3ux.github.io/assets/images/thumbnail.png">
   <!-- SEO -->
   <meta name="description"
     content="A skilled Project Manager with expertise in leading cross-functional teams and optimizing business processes.">
@@ -75,7 +75,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <img src="assets\images\profile.jpg" alt="Ricardo Estepa" class="profile-img">
+        <img src="assets\images\profile.jpg" alt="Ricardo Alonso Estepa Estupiñán" class="profile-img">
         <h1>Ricardo Alonso Estepa Estupiñán</h1>
         <h2>Project Manager</h2>
         <p class="en">I lead cross-functional projects that not only solve complex problems but also transform the way
@@ -645,85 +645,7 @@
       </p>
     </div>
   </footer>
-  <script>
-    /*  Switch language to English or Spanish  */
-    function switchLanguage(lang) {
-      // Cambiar clase en body
-      document.body.className = 'language-' + lang;
-
-      // Update active buttons
-      document.querySelectorAll('.language-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang));
-      });
-    }
-
-    /*  Scroll to Top */
-    const scrollToTopButton = document.getElementById('scrollToTop');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollToTopButton.style.display = 'flex'; // Show the button
-      } else {
-        scrollToTopButton.style.display = 'none'; // Hide the button
-      }
-    });
-
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Smooth scrolling
-      });
-    }
-
-    /*  Detect language on page load */
-    function detectLanguage() {
-      const userLang = navigator.language || navigator.userLanguage; // Get browser language
-      const lang = userLang.startsWith('es') ? 'es' : 'en'; // Set ES if Spanish, else EN
-
-      // Change class in body to match the detected language
-      document.body.className = 'language-' + lang;
-
-      // Update active buttons
-      document.querySelectorAll('.language-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang));
-      });
-    }
-
-    // Call the function on page load
-    window.onload = detectLanguage;
-
-    /* Function to toggle theme */
-    function toggleTheme() {
-      const themeToggle = document.getElementById('theme-toggle');
-      const theme = themeToggle.checked ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-    }
-
-    function loadTheme() {
-      // 1. ¿El usuario ya eligió un tema antes?
-      const storageTheme = localStorage.getItem('theme');
-
-      // 2. Si no, usamos el esquema de color del sistema
-      const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
-      // 3. El que tenga prioridad será el que se aplique
-      const finalTheme = storageTheme || systemColorScheme;
-
-      // 4. Aplicar el tema
-      document.documentElement.setAttribute('data-theme', finalTheme);
-
-      // 5. Sincronizar el switch visual
-      const themeToggle = document.getElementById('theme-toggle');
-      if (themeToggle) {
-        themeToggle.checked = finalTheme === 'dark';
-        themeToggle.addEventListener('change', toggleTheme);
-      }
-    }
-
-    // Cargar el tema cuando la página esté lista
-    window.addEventListener('DOMContentLoaded', loadTheme);
-  </script>
+  <script src="javascript/scripts.js" defer></script>
 </body>
 
 </html>
