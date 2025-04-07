@@ -1,22 +1,56 @@
 /* ==========================
    VARIABLES GLOBALES
 ========================== */
-:root {
-    --primary-color: #EAEAEA;
-    --secondary-color: #FFFFFF;
-    --dark-bg: #101010;
-    --card-bg: #292a2b;
-    --dark-text: #1E1E1E;
-    --light-text: #F9FAFB;
-    --gray-text: #A0A0A0;
+:root[data-theme="light"] {
+    --bg: #f0f0f0;
+    --header-bg: #f5f5f5e6;
+    --header-shadow: #0000001a;
+    --hero-gradient: #4e96ff26;
+    --profile-shadow: #4e96ff4d;
+    --hero-bg: #e1efe9;
+    --title-gradient-start: #242424;
+    --title-gradient-end: #0c0c0c;
+    --switch-track-bg: #b9cfe7; /* Barra del interruptor que cambia el tema */
+    --switch-thumb-bg: #3955f0;
+    --button-active-text: #c4c4c4;
+    --text-gradient-start: #383838;
+    --text-gradient-end: #2b2b2b;
+    --green-bg: #49b42f;
+    --cyan-bg: #268bd2;
+    --magenta-bg: #bc36c6;
+    --card-border: #c2c2c2;
+    --card-shadow: #0000001a;
+    --hover-color: #eaeaea;
+    --external-link: #2563eb;
+    --date-border-start: #02fcef70;
+    --date-border-middle: #ffb52b70;
+    --date-border-end: #a02bfe70;
+  }
+  :root[data-theme="dark"] {
+    --bg: #101010;
+    --header-bg: #141414e6;
+    --hero-bg: #292a2b;
+    --header-shadow: #0000004d;
+    --hero-gradient: #4e96ff26;
+    --profile-shadow: #4e96ff4d;
+    --title-gradient-start: #EAEAEA;
+    --title-gradient-end: #FFFFFF;
+    --switch-track-bg: #b9cfe7; /* Barra del interruptor que cambia el tema */
+    --switch-thumb-bg: #003892;
+    --button-active-text: #1E1E1E;
+    --text-gradient-start: #F9FAFB;
+    --text-gradient-end: #A0A0A0;
     --green-bg: #A7FC8F;
     --cyan-bg: #59B2EA;
     --magenta-bg: #E131F3;
-    --border-color: #333333;
+    --card-border: #333333;
+    --card-shadow: #0000004d;
     --hover-color: #1f2225;
-    --blue-color: #003892;
-    --highlight-text: #60A5FA
-}
+    --external-link: #60A5FA;
+    --date-border-start: #02fcef70;
+    --date-border-middle: #ffb52b70;
+    --date-border-end: #a02bfe70;
+  }
 
 /* ==========================
    REGLAS GENERALES
@@ -29,9 +63,9 @@
 
 body {
     font-family: Inter, sans-serif;
-    color: var(--light-text);
+    color: var(--text-gradient-start);
     line-height: 1.6;
-    background-color: var(--dark-bg)
+    background-color: var(--bg)
 }
 
 .container {
@@ -41,20 +75,19 @@ body {
 }
 
 .hero h1 {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color))
+    background: linear-gradient(135deg, var(--title-gradient-start), var(--title-gradient-end))
 }
 
 .hero p,
 .language-btn {
-    color: var(--gray-text)
+    color: var(--text-gradient-end)
 }
 
 .hero,
 .social-link {
-    background-color: var(--card-bg)
+    background-color: var(--hero-bg)
 }
 
-.language-switch,
 .social-links {
     gap: 1rem;
     display: flex
@@ -78,8 +111,8 @@ footer {
    HEADER
 ========================== */
 header {
-    background-color: #141414e6;
-    box-shadow: 0 1px 3px #0000004d;
+    background-color: var(--header-bg);
+    box-shadow: 0 1px 3px var(--header-shadow);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -107,9 +140,14 @@ header {
 /* ==========================
    BOTONES DE IDIOMA
 ========================== */
+.language-switch {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
 .language-btn {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background: var(--hero-bg);
+    border: 1px solid var(--card-border);
     font-size: .875rem;
     cursor: pointer;
     padding: .5rem 1rem;
@@ -119,8 +157,8 @@ header {
 }
 
 .language-btn.active {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--dark-text);
+    background: linear-gradient(135deg, var(--title-gradient-start), var(--title-gradient-end));
+    color: var(--button-active-text);
 }
 
 .language-btn:hover:not(.active),
@@ -134,8 +172,8 @@ header {
 ========================== */
 .hero {
     padding: 5rem 0;
-    background-image: radial-gradient(circle at 50% 0, rgba(78, 150, 255, .15), transparent 50%);
-    border-bottom: 1px solid var(--border-color)
+    background-image: radial-gradient(circle at 50% 0, var(--hero-gradient), transparent 50%);
+    border-bottom: 1px solid var(--card-border)
 }
 
 .education-container,
@@ -166,7 +204,7 @@ header {
 .hero h2 {
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
-    background: linear-gradient(135deg, var(--light-text), var(--gray-text));
+    background: linear-gradient(135deg, var(--text-gradient-start), var(--text-gradient-end));
     -webkit-background-clip: text;
     background-clip: text
 }
@@ -182,8 +220,8 @@ header {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 2rem;
-    border: 3px solid var(--primary-color);
-    box-shadow: 0 0 25px rgba(78, 150, 255, .3)
+    border: 3px solid var(--title-gradient-start);
+    box-shadow: 0 0 25px var(--profile-shadow)
 }
 
 /* ==========================
@@ -200,18 +238,18 @@ header {
     padding: .5rem 1rem;
     border-radius: .375rem;
     text-decoration: none;
-    color: var(--light-text);
-    border: 1px solid var(--border-color);
+    color: var(--text-gradient-start);
+    border: 1px solid var(--card-border);
     transition: .3s
 }
 
 .social-link:hover {
-    border-color: var(--primary-color)
+    border-color: var(--title-gradient-start)
 }
 
 .social-link i {
     margin-right: .5rem;
-    color: var(--primary-color)
+    color: var(--title-gradient-start)
 }
 
 /* ==========================
@@ -219,12 +257,12 @@ SECCIONES GENERALES
 ========================== */
 .section {
     padding: 5rem 0;
-    border-bottom: 1px solid var(--border-color)
+    border-bottom: 1px solid var(--card-border)
 }
 
 .section-title,
 .section-title::after {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color))
+    background: linear-gradient(135deg, var(--title-gradient-start), var(--title-gradient-end))
 }
 
 .section:last-child {
@@ -267,7 +305,7 @@ SECCIONES GENERALES
     border-radius: calc(infinity * 1px);
     font-weight: 500;
     border: 1px solid transparent;
-    background-image: linear-gradient(var(--dark-bg), var(--dark-bg)), linear-gradient(135deg, var(--magenta-bg), var(--cyan-bg), var(--green-bg));
+    background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(135deg, var(--magenta-bg), var(--cyan-bg), var(--green-bg));
     background-origin: border-box;
     background-clip: padding-box, border-box;
     transition: .3s
@@ -280,13 +318,13 @@ SECCIONES GENERALES
 .timeline-item {
     transition: transform .3s, box-shadow .3s;
     position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .2)
+    box-shadow: 0 5px 15px var(--card-shadow)
 }
 
 .skill:hover {
-    border-color: var(--primary-color);
+    border-color: var(--title-gradient-start);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .2)
+    box-shadow: 0 5px 15px var(--card-shadow)
 }
 
 .timeline-item {
@@ -296,14 +334,14 @@ SECCIONES GENERALES
     background-color: none;
     border-radius: .5rem;
     padding: 2rem;
-    border: 1px solid var(--border-color)
+    border: 1px solid var(--card-border)
 }
 
 .education-item:hover,
 .timeline-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .3);
-    border-color: var(--primary-color)
+    box-shadow: 0 8px 25px var(--card-shadow);
+    border-color: var(--title-gradient-start)
 }
 
 .contact-item:last-child,
@@ -330,20 +368,20 @@ SECCIONES GENERALES
 
 .education-date,
 .timeline-date {
-    background-image: linear-gradient(var(--dark-bg), var(--dark-bg)), linear-gradient(135deg, #02fcef70 0, #ffb52b70 50%, #a02bfe70 100%);
+    background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(135deg, var(--date-border-start) 0, var(--date-border-middle) 50%, var(--date-border-end) 100%);
     background-origin: border-box;
     background-clip: padding-box, border-box
 }
 
 .timeline-company {
     font-size: 1.1rem;
-    color: var(--primary-color);
+    color: var(--title-gradient-start);
     font-weight: 500
 }
 
 .timeline-date {
     font-size: .8rem;
-    color: var(--light-text);
+    color: var(--text-gradient-start);
     font-weight: 300;
     padding: .25rem .75rem;
     border-radius: 1rem;
@@ -351,7 +389,7 @@ SECCIONES GENERALES
 }
 
 .timeline-location {
-    color: var(--gray-text);
+    color: var(--text-gradient-end);
     font-size: .875rem;
     font-weight: 300;
     margin-bottom: 1rem
@@ -359,14 +397,14 @@ SECCIONES GENERALES
 
 .timeline-content {
     margin-top: 1rem;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--card-border);
     padding-top: 1rem
 }
 
 .timeline-section-title {
     font-weight: 700;
     margin-bottom: .5rem;
-    color: var(--primary-color)
+    color: var(--title-gradient-start)
 }
 
 .timeline-list {
@@ -397,13 +435,13 @@ SECCIONES GENERALES
     padding: 2rem;
     border-radius: .5rem;
     margin-bottom: 1.5rem;
-    border: 1px solid var(--border-color)
+    border: 1px solid var(--card-border)
 }
 
 .education-date,
 .education-title {
     margin-bottom: .5rem;
-    color: var(--light-text)
+    color: var(--text-gradient-start)
 }
 
 .education-icon {
@@ -411,12 +449,12 @@ SECCIONES GENERALES
     top: 10px;
     right: 10px;
     font-size: 16px;
-    color: var(--gray-text);
+    color: var(--text-gradient-end);
     cursor: pointer
 }
 
 .education-icon:hover {
-    color: var(--highlight-text)
+    color: var(--external-link)
 }
 
 .education-date {
@@ -437,14 +475,14 @@ SECCIONES GENERALES
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--gray-text);
+    color: var(--text-gradient-end);
     font-weight: 300
 }
 
 .institution-icon {
     flex-shrink: 0;
     /* Evita que el ícono cambie de tamaño */
-    color: var(--primary-color);
+    color: var(--title-gradient-start);
     /* Color del ícono */
 }
 
@@ -457,11 +495,11 @@ SECCIONES GENERALES
     right: 20px;
     width: 50px;
     height: 50px;
-    color: var(--gray-text);
-    background-color: var(--dark-bg);
-    border: 1px solid var(--gray-text);
+    color: var(--text-gradient-end);
+    background-color: var(--bg);
+    border: 1px solid var(--text-gradient-end);
     border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    box-shadow: 0 5px 15px var(--card-shadow);
     display: none;
     justify-content: center;
     align-items: center;
@@ -475,7 +513,8 @@ SECCIONES GENERALES
 }
 
 .scroll-to-top:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--title-gradient-end);
+    color: var(--button-active-text);
     transform: translateY(-5px)
 }
 
@@ -528,29 +567,28 @@ SECCIONES GENERALES
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--dark-bg)
+    background: var(--bg)
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--border-color);
+    background: var(--card-border);
     border-radius: 5px
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color)
+    background: var(--title-gradient-start)
 }
 
 /* ==========================
    FOOTER
 ========================== */
 .footer {
-    background-color: #141414e6;
-    box-shadow: 0 0px 3px #0000004d;
-    color: var(--primary-color);
+    background-color: var(--header-bg);
+    box-shadow: 0 0px 3px var(--card-shadow);
+    color: var(--title-gradient-start);
     text-align: center;
     font-family: Poppins, sans-serif;
     font-weight: 400;
-    ;
     padding: 20px 0;
     font-size: 14px;
 }
@@ -559,72 +597,70 @@ SECCIONES GENERALES
     margin: 0;
 }
 
-/* Theme switch container */
-.theme-switch {
-    display: inline-flex;
-    align-items: center;
-    margin-left: 10px;
-}
+/* ==========================
+   THEME SWITCH
+========================== */
 
-/* Switch styles */
-.switch {
+  /* Ocultar el checkbox original */
+  input[type="checkbox"] {
+    display: none;
+  }
+  /* El contenedor completo del switch */
+  .theme-switch {
     position: relative;
+    display: inline-block;
+    /* Definimos el tamaño del track (barra) */
     width: 50px;
-    height: 24px;
-    /* background-color: var(--light-text); */
-    /* Color de la barra con el tema claro */
-    border-radius: 12px;
-    border: 1px solid var(--light-text);
+    height: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 0; /* Asegura que la barra esté detrás del círculo */
-    display: flex;
-    align-items: center; /* Centra el contenido verticalmente */
-}
-
-.switch-circle {
+  }
+  /* La barra del switch */
+  .switch-track {
     position: absolute;
-    top: 50%; /* Posiciona el círculo en el centro vertical */
-    left: 0; /* Posición inicial del círculo */
-    transform: translateY(-50%); /* Ajusta el círculo para que esté perfectamente centrado */
-    width: 24px; /* Tamaño del círculo */
-    height: 24px; /* Tamaño del círculo */
-    background-color: var(--blue-color); /* Color del círculo */
-    border-radius: 50%; /* Hace que el círculo sea redondo */
-    transition: left 0.3s ease, background-color 0.3s ease;
-    display: flex;
-    align-items: center; /* Centra el icono dentro del círculo */
-    justify-content: center; /* Centra el icono dentro del círculo */
-    z-index: 1; /* Asegura que el círculo esté por encima de la barra */
-}
-/* Iconos dentro del círculo */
-.icon-sun,
-.icon-moon {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: var(--switch-track-bg);
+    border-radius: 10px;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+  }
+  /* El thumb (círculo) */
+  .switch-thumb {
     position: absolute;
+    top: 50%;
+    left: -4px; /* Posición inicial: sale 4px a la izquierda */
+    width: 28px;
+    height: 28px;
+    background-color: var(--switch-thumb-bg);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: left 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Íconos dentro del thumb */
+  .switch-thumb i {
     color: white;
-    font-size: 16px;
-    display: none;
-}
-
-.icon-sun {
-    display: block;
-}
-
-.switch.dark .icon-sun {
-    display: none;
-}
-
-.switch.dark .icon-moon {
-    display: block;
-}
-
-.switch.dark .switch-circle {
-    left: 24px;
-    /* Posición final del círculo */
-}
-
-.switch.dark {
-    background-color: var(--hover-color);
-    /* Color de la barra con el tema oscuro */
-    border: 1px solid var(--border-color)
-}
+    font-size: 14px;
+    transition: opacity 0.3s;
+    position: absolute;
+  }
+  .switch-thumb .sun {
+    opacity: 1;
+  }
+  .switch-thumb .moon {
+    opacity: 0;
+  }
+  /* Cuando el checkbox está marcado (tema oscuro) */
+  input:checked + .theme-switch .switch-thumb {
+    left: 26px; /* Calculado: 26px = 50 - 28 + (-4 + 8) */
+  }
+  input:checked + .theme-switch .switch-thumb .sun {
+    opacity: 0;
+  }
+  input:checked + .theme-switch .switch-thumb .moon {
+    opacity: 1;
+  }

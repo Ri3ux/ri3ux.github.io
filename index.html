@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" data-theme="light">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google Console -->
   <meta name="google-site-verification" content="H-K_3ZVRAimi9IOGRY6GHDd5hXzsxISm5Az_QVjlS3E" />
@@ -53,13 +53,18 @@
         <div class="language-switch">
           <button class="language-btn active" onclick="switchLanguage('en')">English</button>
           <button class="language-btn" onclick="switchLanguage('es')">Español</button>
+          <!-- Theme Switch -->
           <div class="theme-switch">
-            <div class="switch" onclick="toggleTheme()">
-              <div class="switch-circle">
-                <i class="fas fa-sun icon-sun"></i>
-                <i class="fas fa-moon icon-moon"></i>
-              </div>
-            </div>
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle" class="theme-switch">
+              <!-- La barra del switch -->
+              <span class="switch-track"></span>
+              <!-- El thumb (círculo) con íconos -->
+              <span class="switch-thumb">
+                <i class="fas fa-sun sun"></i>
+                <i class="fas fa-moon moon"></i>
+              </span>
+            </label>
           </div>
         </div>
       </div>
@@ -687,17 +692,37 @@
     // Call the function on page load
     window.onload = detectLanguage;
 
-    /* Theme selector */
+    /* Function to toggle theme */
     function toggleTheme() {
-      const body = document.body;
-      const switchElement = document.querySelector('.switch');
-
-      // Toggle dark mode class on body
-      body.classList.toggle('dark-mode');
-
-      // Toggle switch position and icon
-      switchElement.classList.toggle('dark');
+      const themeToggle = document.getElementById('theme-toggle');
+      const theme = themeToggle.checked ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
     }
+
+    function loadTheme() {
+      // 1. ¿El usuario ya eligió un tema antes?
+      const storageTheme = localStorage.getItem('theme');
+
+      // 2. Si no, usamos el esquema de color del sistema
+      const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+      // 3. El que tenga prioridad será el que se aplique
+      const finalTheme = storageTheme || systemColorScheme;
+
+      // 4. Aplicar el tema
+      document.documentElement.setAttribute('data-theme', finalTheme);
+
+      // 5. Sincronizar el switch visual
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.checked = finalTheme === 'dark';
+        themeToggle.addEventListener('change', toggleTheme);
+      }
+    }
+
+    // Cargar el tema cuando la página esté lista
+    window.addEventListener('DOMContentLoaded', loadTheme);
   </script>
 </body>
 
