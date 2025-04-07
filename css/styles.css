@@ -14,6 +14,7 @@
     --magenta-bg: #E131F3;
     --border-color: #333333;
     --hover-color: #1f2225;
+    --blue-color: #003892;
     --highlight-text: #60A5FA
 }
 
@@ -39,8 +40,7 @@ body {
     padding: 0 2rem
 }
 
-.hero h1,
-.language-btn.active {
+.hero h1 {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color))
 }
 
@@ -119,8 +119,8 @@ header {
 }
 
 .language-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--dark-text);
-    border-color: transparent
 }
 
 .language-btn:hover:not(.active),
@@ -442,9 +442,11 @@ SECCIONES GENERALES
 }
 
 .institution-icon {
-    flex-shrink: 0; /* Evita que el ícono cambie de tamaño */
-    color: var(--primary-color); /* Color del ícono */
-  }
+    flex-shrink: 0;
+    /* Evita que el ícono cambie de tamaño */
+    color: var(--primary-color);
+    /* Color del ícono */
+}
 
 /* ==========================
    BOTÓN PARA VOLVER ARRIBA
@@ -547,11 +549,82 @@ SECCIONES GENERALES
     color: var(--primary-color);
     text-align: center;
     font-family: Poppins, sans-serif;
-    font-weight: 400;;
+    font-weight: 400;
+    ;
     padding: 20px 0;
     font-size: 14px;
-  }
-  
-  .footer p {
+}
+
+.footer p {
     margin: 0;
-  }
+}
+
+/* Theme switch container */
+.theme-switch {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* Switch styles */
+.switch {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    /* background-color: var(--light-text); */
+    /* Color de la barra con el tema claro */
+    border-radius: 12px;
+    border: 1px solid var(--light-text);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 0; /* Asegura que la barra esté detrás del círculo */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+.switch-circle {
+    position: absolute;
+    top: 50%; /* Posiciona el círculo en el centro vertical */
+    left: 0; /* Posición inicial del círculo */
+    transform: translateY(-50%); /* Ajusta el círculo para que esté perfectamente centrado */
+    width: 24px; /* Tamaño del círculo */
+    height: 24px; /* Tamaño del círculo */
+    background-color: var(--blue-color); /* Color del círculo */
+    border-radius: 50%; /* Hace que el círculo sea redondo */
+    transition: left 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center; /* Centra el icono dentro del círculo */
+    justify-content: center; /* Centra el icono dentro del círculo */
+    z-index: 1; /* Asegura que el círculo esté por encima de la barra */
+}
+/* Iconos dentro del círculo */
+.icon-sun,
+.icon-moon {
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    display: none;
+}
+
+.icon-sun {
+    display: block;
+}
+
+.switch.dark .icon-sun {
+    display: none;
+}
+
+.switch.dark .icon-moon {
+    display: block;
+}
+
+.switch.dark .switch-circle {
+    left: 24px;
+    /* Posición final del círculo */
+}
+
+.switch.dark {
+    background-color: var(--hover-color);
+    /* Color de la barra con el tema oscuro */
+    border: 1px solid var(--border-color)
+}

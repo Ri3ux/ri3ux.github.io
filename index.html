@@ -53,6 +53,14 @@
         <div class="language-switch">
           <button class="language-btn active" onclick="switchLanguage('en')">English</button>
           <button class="language-btn" onclick="switchLanguage('es')">Español</button>
+          <div class="theme-switch">
+            <div class="switch" onclick="toggleTheme()">
+              <div class="switch-circle">
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -678,6 +686,18 @@
 
     // Call the function on page load
     window.onload = detectLanguage;
+
+    /* Theme selector */
+    function toggleTheme() {
+      const body = document.body;
+      const switchElement = document.querySelector('.switch');
+
+      // Toggle dark mode class on body
+      body.classList.toggle('dark-mode');
+
+      // Toggle switch position and icon
+      switchElement.classList.toggle('dark');
+    }
   </script>
 </body>
 
