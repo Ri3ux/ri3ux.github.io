@@ -83,3 +83,54 @@ function loadTheme() {
 
 // Cargar el tema cuando la página esté lista
 window.addEventListener('DOMContentLoaded', loadTheme);
+
+/* ==========================
+   ANIMACIÓN DEL SWITCH DEL TEMA
+========================== */
+const themeToggle = document.getElementById('theme-toggle');
+const thumb = document.querySelector('.switch-thumb');
+
+themeToggle.addEventListener('change', () => {
+  thumb.classList.add('glow');
+
+  // Quitamos la clase luego de que termine la animación
+  setTimeout(() => {
+    thumb.classList.remove('glow');
+  }, 500); // Debe coincidir con la duración de la animación
+});
+
+/* ==========================
+   ANIMACIÓN DE TRANSICIÓN DEL TEMA
+========================== */
+const themeFade = document.getElementById('theme-fade');
+
+function triggerFadeThemeChange(theme) {
+    const themeFade = document.getElementById('theme-fade');
+    const body = document.body;
+  
+    // 📳 Vibración en dispositivos móviles (si está soportado)
+    if (navigator.vibrate) {
+      navigator.vibrate(80); // una pequeña vibración de 80ms
+    }
+  
+    // Animación visual
+    body.classList.add('theme-transitioning');
+    themeFade.classList.add('active');
+  
+    setTimeout(() => {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }, 200);
+  
+    setTimeout(() => {
+      themeFade.classList.remove('active');
+      body.classList.remove('theme-transitioning');
+    }, 400);
+  }
+  
+
+// Reemplaza el cambio de tema original por esto:
+document.getElementById('theme-toggle').addEventListener('change', function () {
+  const newTheme = this.checked ? 'dark' : 'light';
+  triggerFadeThemeChange(newTheme);
+});
