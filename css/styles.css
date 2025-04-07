@@ -10,7 +10,8 @@
     --hero-bg: #e1efe9;
     --title-gradient-start: #242424;
     --title-gradient-end: #0c0c0c;
-    --switch-track-bg: #b9cfe7; /* Barra del interruptor que cambia el tema */
+    --switch-track-bg: #b9cfe7;
+    /* Barra del interruptor que cambia el tema */
     --switch-thumb-bg: #3955f0;
     --button-active-text: #c4c4c4;
     --text-gradient-start: #383838;
@@ -25,8 +26,9 @@
     --date-border-start: #02fcef70;
     --date-border-middle: #ffb52b70;
     --date-border-end: #a02bfe70;
-  }
-  :root[data-theme="dark"] {
+}
+
+:root[data-theme="dark"] {
     --bg: #101010;
     --header-bg: #141414e6;
     --hero-bg: #292a2b;
@@ -35,7 +37,8 @@
     --profile-shadow: #4e96ff4d;
     --title-gradient-start: #EAEAEA;
     --title-gradient-end: #FFFFFF;
-    --switch-track-bg: #b9cfe7; /* Barra del interruptor que cambia el tema */
+    --switch-track-bg: #b9cfe7;
+    /* Barra del interruptor que cambia el tema */
     --switch-thumb-bg: #003892;
     --button-active-text: #1E1E1E;
     --text-gradient-start: #F9FAFB;
@@ -50,7 +53,7 @@
     --date-border-start: #02fcef70;
     --date-border-middle: #ffb52b70;
     --date-border-end: #a02bfe70;
-  }
+}
 
 /* ==========================
    REGLAS GENERALES
@@ -145,6 +148,7 @@ header {
     display: flex;
     align-items: center;
 }
+
 .language-btn {
     background: var(--hero-bg);
     border: 1px solid var(--card-border);
@@ -601,66 +605,80 @@ SECCIONES GENERALES
    THEME SWITCH
 ========================== */
 
-  /* Ocultar el checkbox original */
-  input[type="checkbox"] {
+/* Ocultar el checkbox original */
+input[type="checkbox"] {
     display: none;
-  }
-  /* El contenedor completo del switch */
-  .theme-switch {
+}
+
+/* El contenedor completo del switch */
+.theme-switch {
     position: relative;
     display: inline-block;
     /* Definimos el tamaño del track (barra) */
     width: 50px;
     height: 20px;
     cursor: pointer;
-  }
-  /* La barra del switch */
-  .switch-track {
+}
+
+/* La barra del switch */
+.switch-track {
     position: absolute;
     top: 50%;
     left: 0;
     width: 100%;
     height: 20px;
-    background-color: var(--switch-track-bg);
+    border: 1px solid var(--switch-track-bg);
+    /* background-color: var(--switch-track-bg); */
     border-radius: 10px;
     transform: translateY(-50%);
     transition: background-color 0.3s;
-  }
-  /* El thumb (círculo) */
-  .switch-thumb {
+}
+
+/* El thumb (círculo) */
+.switch-thumb {
     position: absolute;
     top: 50%;
-    left: -4px; /* Posición inicial: sale 4px a la izquierda */
+    left: -4px;
+    /* Posición inicial: sale 4px a la izquierda */
     width: 28px;
     height: 28px;
-    background-color: var(--switch-thumb-bg);
+    border: 1px solid var(--switch-track-bg);
+    background-color: var(--header-bg);
+    /* background-color: var(--switch-thumb-bg); */
     border-radius: 50%;
     transform: translateY(-50%);
     transition: left 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  /* Íconos dentro del thumb */
-  .switch-thumb i {
-    color: white;
+}
+
+/* Íconos dentro del thumb */
+.switch-thumb i {
+    color: var(--text-gradient-start);
     font-size: 14px;
     transition: opacity 0.3s;
     position: absolute;
-  }
-  .switch-thumb .sun {
+}
+
+.switch-thumb .sun {
     opacity: 1;
-  }
-  .switch-thumb .moon {
+}
+
+.switch-thumb .moon {
     opacity: 0;
-  }
-  /* Cuando el checkbox está marcado (tema oscuro) */
-  input:checked + .theme-switch .switch-thumb {
-    left: 26px; /* Calculado: 26px = 50 - 28 + (-4 + 8) */
-  }
-  input:checked + .theme-switch .switch-thumb .sun {
+}
+
+/* Cuando el checkbox está marcado (tema oscuro) */
+input:checked+.theme-switch .switch-thumb {
+    left: 26px;
+    /* Calculado: 26px = 50 - 28 + (-4 + 8) */
+}
+
+input:checked+.theme-switch .switch-thumb .sun {
     opacity: 0;
-  }
-  input:checked + .theme-switch .switch-thumb .moon {
+}
+
+input:checked+.theme-switch .switch-thumb .moon {
     opacity: 1;
-  }
+}
