@@ -219,7 +219,8 @@ h1{ font-family: var(--font-display); font-weight: 500; font-size: clamp(2.25rem
   .index{ border-top: 1px solid var(--line); padding: 24px 8px 28px; }
   .eyebrow{ margin-left: 12px; }
   .item{ padding: 13px 12px; }
-  .items .console{ padding: 6px 0 10px; }
+  /* Reserva una pantalla desde el inicio: así el capítulo siempre puede subir al tope mientras se escribe el comando */
+  .items .console{ padding: 6px 0 10px; min-height: calc(100svh - 80px); }
   .index > .console{ padding: 16px 0 0; }
   .term{ position: static; max-height: none; border-radius: 14px; }
   .term-body{ padding: 18px 18px 22px; overflow: visible; }
