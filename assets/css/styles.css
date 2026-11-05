@@ -120,12 +120,13 @@ img{ display: block; max-width: 100%; }
 .who strong{ display: block; color: var(--ink); font-weight: 600; }
 h1{ font-family: var(--font-display); font-weight: 500; font-size: clamp(2.25rem, 3.5vw, 3.5rem); line-height: 1.04; letter-spacing: -.035em; margin: 0 0 22px; text-wrap: balance; max-width: 14ch; }
 .lede{ font-size: 1.125rem; color: var(--muted); max-width: 36ch; margin: 0 0 34px; text-wrap: pretty; }
-.actions{ display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
+.actions{ display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; }
 .btn{ display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: .9375rem; text-decoration: none; padding: 13px 18px; border-radius: 12px; background: var(--accent); color: var(--accent-ink); transition: transform .15s ease, filter .15s ease; }
 .btn:hover{ transform: translateY(-1px); filter: brightness(1.06); }
 .btn svg{ width: 18px; height: 18px; }
-.quiet{ display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-weight: 500; font-size: .9375rem; text-decoration: none; transition: color .15s ease; }
-.quiet:hover{ color: var(--accent); }
+/* Botón secundario con borde (mismo estilo que "Anterior" en la terminal) */
+.quiet{ display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-weight: 500; font-size: .9375rem; text-decoration: none; padding: 12px 18px; border: 1px solid var(--line); border-radius: 12px; transition: color .15s ease, border-color .15s ease; }
+.quiet:hover{ color: var(--accent); border-color: var(--accent); }
 .quiet svg{ width: 17px; height: 17px; }
 .foot{ padding: 0 48px 28px; color: var(--muted); font-size: .8125rem; }
 
