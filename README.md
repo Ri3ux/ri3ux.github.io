@@ -27,7 +27,7 @@ assets/
 | Agregar un trabajo                    | `content.js`: una entrada nueva en `jobs` de ambos idiomas con el mismo id. Aparece sola en el índice |
 | Agregar un curso                      | `content.js`, lista `certs`                                           |
 | El año del pie de página              | No hace falta: `{year}` en `content.js` se reemplaza por el año actual |
-| Enlaces de contacto (agenda, LinkedIn, correo) | `index.html`, bloque `.actions`                              |
+| Enlaces de contacto (correo, LinkedIn) | `index.html`, bloque `.actions`. El botón final de la trayectoria usa el mismo correo |
 | La imagen al compartir                | Reemplaza `assets/images/thumbnail.png` (1200 × 630) y sube el `?v=` del `og:image` en `index.html`. Las alternativas están en `assets/images/thumbnail-*.png` |
 
 ### Cambiar el color de acento

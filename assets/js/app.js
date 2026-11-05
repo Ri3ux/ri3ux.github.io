@@ -56,16 +56,16 @@
     const list = (items, plus) => `<ul class="t-list ${plus ? "plus" : ""} ln" style="--i:${i++}">${items.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
     const label = text => line(`<p class="t-lab">${esc(text)}</p>`);
     const heading = text => line(`<h2 class="t-h">${esc(text)}</h2>`);
-    // Navegación lineal entre capítulos: sin "Anterior" en el primero; en el último, invitación a agendar
+    // Navegación lineal entre capítulos: sin "Anterior" en el primero; en el último, invitación a escribir
     const nextLink = () => {
       const i = ORDER.indexOf(id), prev = ORDER[i - 1], next = ORDER[i + 1];
-      const book = document.querySelector(".intro .btn");
+      const contact = $("contact");  // mismo destino que el botón principal
       const left = prev
         ? `<a class="chap-link prev" href="#${prev}" data-go="${prev}">← ${T.prev}: ${esc(titleFor(prev))}</a>`
         : "<span></span>";
       const right = next
         ? `<a class="chap-link next" href="#${next}" data-go="${next}">${T.next}: ${esc(titleFor(next))} →</a>`
-        : `<a class="chap-link cta" href="${book.href}" target="_blank" rel="noopener">${esc(T.book)} →</a>`;
+        : `<a class="chap-link cta" href="${contact.href}">${esc(T.contact)} →</a>`;
       return line(`<nav class="chap-nav" aria-label="${esc(T.idx)}">${left}${right}</nav>`);
     };
 
