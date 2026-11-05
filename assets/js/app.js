@@ -17,6 +17,9 @@
   const TYPE_SPEED = [18, 40];   // ms por letra al escribir un comando (mín., máx.)
   // Ícono de enlace externo (cuadro abierto con flecha)
   const ICON_EXTERNAL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4.5H7.5a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h9a3 3 0 0 0 3-3V14M14 4.5h5.5V10M19.5 4.5 11 13"/></svg>';
+  // Chevrons de "Anterior" y "Siguiente": lienzo cuadrado y trazo centrado en (12, 12), así se alinean al centro del texto
+  const ICON_PREV = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6 9 12l6 6"/></svg>';
+  const ICON_NEXT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>';
 
   const $ = id => document.getElementById(id);
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -56,16 +59,15 @@
     const list = (items, plus) => `<ul class="t-list ${plus ? "plus" : ""} ln" style="--i:${i++}">${items.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
     const label = text => line(`<p class="t-lab">${esc(text)}</p>`);
     const heading = text => line(`<h2 class="t-h">${esc(text)}</h2>`);
-    // Navegación lineal entre capítulos: sin "Anterior" en el primero; en el último, invitación a escribir
+    // Navegación lineal entre capítulos: sin "Anterior" en el primero ni "Siguiente" en el último
     const nextLink = () => {
       const i = ORDER.indexOf(id), prev = ORDER[i - 1], next = ORDER[i + 1];
-      const contact = $("contact");  // mismo destino que el botón principal
       const left = prev
-        ? `<a class="chap-link prev" href="#${prev}" data-go="${prev}">← ${T.prev}: ${esc(titleFor(prev))}</a>`
+        ? `<a class="chap-link prev" href="#${prev}" data-go="${prev}">${ICON_PREV}<span>${T.prev}: ${esc(titleFor(prev))}</span></a>`
         : "<span></span>";
       const right = next
-        ? `<a class="chap-link next" href="#${next}" data-go="${next}">${T.next}: ${esc(titleFor(next))} →</a>`
-        : `<a class="chap-link cta" href="${contact.href}">${esc(T.contact)} →</a>`;
+        ? `<a class="chap-link next" href="#${next}" data-go="${next}"><span>${T.next}: ${esc(titleFor(next))}</span>${ICON_NEXT}</a>`
+        : "<span></span>";
       return line(`<nav class="chap-nav" aria-label="${esc(T.idx)}">${left}${right}</nav>`);
     };
 

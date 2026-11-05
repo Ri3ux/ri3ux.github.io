@@ -182,13 +182,17 @@ h1{ font-family: var(--font-display); font-weight: 500; font-size: clamp(2.25rem
 .now-tag{ display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 6px; font-size: .6875rem; letter-spacing: .06em; color: var(--term-accent); border: 1px solid color-mix(in srgb, var(--term-accent) 40%, transparent); vertical-align: 1px; }
 /* Navegación entre capítulos */
 .chap-nav{ display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 22px; }
-.chap-link{ display: inline-flex; align-items: center; text-decoration: none; padding: 7px 12px; border-radius: 9px; font-size: .8125rem; border: 1px solid transparent; transition: background .15s, color .15s, border-color .15s; }
+.chap-link{ display: inline-flex; align-items: center; gap: 6px; text-decoration: none; padding: 7px 12px; border-radius: 9px; font-size: .8125rem; border: 1px solid transparent; transition: background .15s, color .15s, border-color .15s; }
 .chap-link.prev{ color: var(--term-muted); border-color: var(--term-line); }
 .chap-link.prev:hover{ color: var(--term-ink); border-color: color-mix(in srgb, var(--term-ink) 30%, transparent); }
 .chap-link.next{ margin-left: auto; color: var(--term-accent); border-color: color-mix(in srgb, var(--term-accent) 40%, transparent); }
 .chap-link.next:hover{ background: color-mix(in srgb, var(--term-accent) 10%, transparent); }
-.chap-link.cta{ margin-left: auto; color: #1C1A16; background: var(--term-accent); font-weight: 500; }
-.chap-link.cta:hover{ filter: brightness(1.08); }
+/* Chevrons: cuadrados (1:1) para que align-items los centre con el texto */
+.chap-link svg{ flex: none; width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.25; stroke-linecap: round; stroke-linejoin: round; transition: transform .15s ease; }
+.chap-link.prev{ padding-left: 8px; }
+.chap-link.next{ padding-right: 8px; }
+.chap-link.prev:hover svg{ transform: translateX(-2px); }
+.chap-link.next:hover svg{ transform: translateX(2px); }
 .ln{ animation: rise .35s ease both; animation-delay: calc(var(--i, 0) * 40ms); }
 
 
