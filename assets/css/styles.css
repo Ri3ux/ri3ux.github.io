@@ -225,7 +225,7 @@ h1{ font-family: var(--font-display); font-weight: 500; font-size: clamp(2.25rem
   .certs a{ grid-template-columns: 1fr auto; }
   .certs .c-d{ grid-column: 1 / -1; font-size: .75rem; margin-bottom: -6px; }
   .foot{ padding: 24px 16px calc(28px + env(safe-area-inset-bottom, 0px)); }
-  .actions{ gap: 12px 20px; }
+  .actions{ gap: 12px 20px; justify-content: center; }
   .btn{ width: 100%; justify-content: center; }
 }
 

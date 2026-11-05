@@ -178,7 +178,7 @@
     document.documentElement.lang = lang;
     document.querySelectorAll("[data-t]").forEach(el => {
       const v = T[el.dataset.t];
-      if (typeof v === "string") el.textContent = v;
+      if (typeof v === "string") el.textContent = v.replace("{year}", new Date().getFullYear());  // {year} = año actual
     });
     $("theme").setAttribute("aria-label", T.theme);
     document.querySelector(".brand").setAttribute("aria-label", T.home);
