@@ -1,652 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" data-theme="light">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Console -->
-  <meta name="google-site-verification" content="H-K_3ZVRAimi9IOGRY6GHDd5hXzsxISm5Az_QVjlS3E" />
-  <!-- Open Graph meta tags -->
-  <meta property="og:title" content="Ricardo Estepa | Project Manager">
-  <meta property="og:description"
-    content="A skilled Project Manager with expertise in leading cross-functional teams and optimizing business processes.">
-  <meta property="og:image" content="https://ri3ux.github.io/assets/images/thumbnail.png">
-  <meta property="og:url" content="https://ri3ux.github.io/">
-  <meta property="og:image:alt" content="Project Manager">
-  <meta property="og:type" content="website">
-  <!-- Twitter Card meta tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ricardo Estepa | Project Manager">
-  <meta name="twitter:description"
-    content="A skilled Project Manager with expertise in leading cross-functional teams and optimizing business processes.">
-  <meta name="twitter:image" content="https://ri3ux.github.io/assets/images/thumbnail.png">
-  <!-- SEO -->
-  <meta name="description"
-    content="A skilled Project Manager with expertise in leading cross-functional teams and optimizing business processes.">
-  <meta name="keywords"
-    content="Project Manager, Technology Projects, UX/UI Design, Data Analytics, AI-driven Optimization">
-  <title>Ricardo Estepa · Project Manager</title>
-  <!-- Favicon -->
-  <link rel="icon" href="assets\images\favicon.png" type="image/x-icon">
-  <!-- Google Fonts - Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <!-- Google Fonts - Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- CSS Styles -->
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-  </style>
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ricardo Estepa · AI Automation Specialist</title>
+<meta name="description" content="Ricardo Alonso Estepa Estupiñán, AI Automation Specialist en Bogotá. Convierto procesos manuales en sistemas que trabajan solos.">
 
-<body class="language-en">
-  <!-- Header with language switch -->
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <a href="#" class="logo">
-          <img src="assets/images/logo.png" alt="Ricardo Estepa Logo">
-        </a>
-        <div class="language-switch">
-          <button class="language-btn active" onclick="switchLanguage('en')">English</button>
-          <button class="language-btn" onclick="switchLanguage('es')">Español</button>
-          <!-- Theme Switch -->
-          <div class="theme-switch">
-            <input type="checkbox" id="theme-toggle">
-            <label for="theme-toggle" class="theme-switch">
-              <!-- La barra del switch -->
-              <span class="switch-track"></span>
-              <!-- El thumb (círculo) con íconos -->
-              <span class="switch-thumb">
-                <i class="fas fa-sun sun"></i>
-                <i class="fas fa-moon moon"></i>
-              </span>
-            </label>
-          </div>
-        </div>
+<!-- Vista previa al compartir (LinkedIn, WhatsApp, Slack, X).
+     Para cambiar la imagen, reemplaza assets/images/thumbnail.png (1200 × 630)
+     y sube el número de ?v= para que las redes no muestren la versión en caché. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ri3ux.github.io/">
+<meta property="og:title" content="Ricardo Estepa · AI Automation Specialist">
+<meta property="og:description" content="Convierto procesos manuales en sistemas que trabajan solos.">
+<meta property="og:image" content="https://ri3ux.github.io/assets/images/thumbnail.png?v=3">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ricardo Estepa, AI Automation Specialist">
+<meta property="og:site_name" content="Ricardo Estepa">
+<meta property="og:locale" content="es_CO">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ricardo Estepa · AI Automation Specialist">
+<meta name="twitter:description" content="Convierto procesos manuales en sistemas que trabajan solos.">
+<meta name="twitter:image" content="https://ri3ux.github.io/assets/images/thumbnail.png?v=3">
+<meta name="twitter:image:alt" content="Ricardo Estepa, AI Automation Specialist">
+<meta name="author" content="Ricardo Alonso Estepa Estupiñán">
+<link rel="canonical" href="https://ri3ux.github.io/">
+
+<!-- Datos estructurados para buscadores (no se ven en la página) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ricardo Alonso Estepa Estupiñán",
+  "alternateName": ["Ricardo Estepa", "Rieux"],
+  "jobTitle": "AI Automation Specialist",
+  "description": "Diseño y construyo agentes de IA y workflows que captan, nutren y atienden clientes, con la mirada de 8 años liderando productos digitales.",
+  "url": "https://ri3ux.github.io/",
+  "image": "https://ri3ux.github.io/assets/images/profile.jpg",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bogotá", "addressCountry": "CO" },
+  "worksFor": { "@type": "Organization", "name": "FloLoop" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Universidad Pedagógica y Tecnológica de Colombia (UPTC)" },
+    { "@type": "EducationalOrganization", "name": "TripleTen" }
+  ],
+  "knowsAbout": ["AI automation", "Voice AI agents", "GoHighLevel", "n8n", "Email nurturing", "Audience analysis", "Product management", "Data science"],
+  "knowsLanguage": ["es", "en"],
+  "sameAs": ["https://www.linkedin.com/in/rieux"]
+}
+</script>
+
+<!-- Íconos -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#F4EEE3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151310" media="(prefers-color-scheme: dark)">
+
+<!-- Fuentes: si cambias alguna, actualiza también la sección 3 de styles.css -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Aplica el tema guardado antes de pintar, para evitar un parpadeo -->
+<script>try{var th=localStorage.getItem("theme");if(th)document.documentElement.dataset.theme=th}catch(e){}</script>
+<script src="assets/js/content.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</head>
+<body>
+<div class="app" id="app">
+
+  <header class="bar">
+    <a class="brand" href="#" data-go="" aria-label="Ricardo Estepa, inicio">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect class="mark-bg" width="64" height="64" rx="14"/>
+        <rect class="mark-border" x="1" y="1" width="62" height="62" rx="13"/>
+        <g transform="translate(0 -2)">
+          <path class="mark-letter" fill-rule="evenodd" d="M18 18h15.5a10.25 10.25 0 0 1 5.1 19.1L47 50h-9.5l-7.3-11.5h-3.7V50H18zm8.5 7v6.5H33a3.25 3.25 0 0 0 0-6.5z"/>
+          <path class="mark-stripes" d="M0 22.8h64v2H0zm0 6.8h64v2H0zm0 6.8h64v2H0zm0 6.8h64v2H0z"/>
+        </g>
+      </svg>
+    </a>
+    <div class="tools">
+      <div class="seg" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
+      <button class="icon-btn" type="button" id="theme" aria-label="Cambiar tema">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+      </button>
     </div>
   </header>
 
-  <!-- Hero section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <img src="assets\images\profile.jpg" alt="Ricardo Alonso Estepa Estupiñán" class="profile-img">
-        <h1>Ricardo Alonso Estepa Estupiñán</h1>
-        <h2>Project Manager</h2>
-        <p class="en">I lead cross-functional projects that not only solve complex problems but also transform the way
-          businesses operate, driving their impact and scalability.</p>
-        <p class="es">Lidero proyectos multifuncionales que no solo resuelven problemas complejos, sino que también
-          transforman la manera en que los negocios operan, impulsando su impacto y escalabilidad.</p>
+  <!-- Identidad y contacto. Los textos con data-t vienen de content.js -->
+  <main class="intro">
+    <div class="who">
+      <img src="assets/images/profile.jpg" alt="" width="52" height="52">
+      <span><strong>Ricardo Alonso Estepa Estupiñán</strong><span data-t="role"></span></span>
+    </div>
+    <h1 data-t="headline"></h1>
+    <p class="lede" data-t="lede"></p>
+    <div class="actions">
+      <a class="btn" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3svVhBf5dknWkGPl-jFYo3mayW0fO3d2pRa33gHq7-qxrOOq-bzjn8ap6VqggaW9nd4uk0orjG" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-t="book"></span></a>
+      <a class="quiet" href="https://www.linkedin.com/in/rieux" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg>LinkedIn</a>
+      <a class="quiet" href="mailto:sir.ransbach@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>Email</a>
+    </div>
+  </main>
 
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/rieux" class="social-link">
-            <i class="fab fa-linkedin"></i> <span class="en">LinkedIn</span><span class="es">LinkedIn</span>
-          </a>
-          <a href="mailto:sir.ransbach@gmail.com" class="social-link">
-            <i class="fas fa-envelope"></i> <span class="en">Email</span><span class="es">Correo</span>
-          </a>
-          <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3svVhBf5dknWkGPl-jFYo3mayW0fO3d2pRa33gHq7-qxrOOq-bzjn8ap6VqggaW9nd4uk0orjG"
-            class="social-link">
-            <i class="fas fa-calendar"></i> <span class="en">Book a call</span><span class="es">Agenda una
-              llamada</span>
-          </a>
-        </div>
-      </div>
+  <!-- Índice de capítulos: lo genera app.js a partir de content.js -->
+  <nav class="index" id="index" aria-labelledby="idx-label">
+    <p class="eyebrow" id="idx-label" data-t="idx"></p>
+    <ul class="items" id="items"></ul>
+  </nav>
+
+  <!-- Terminal: muestra el capítulo elegido -->
+  <section class="console" id="console" aria-labelledby="term-title">
+    <div class="term">
+      <div class="term-top"><span id="term-title">ricardo@rieux:<b id="path">~</b></span><span aria-hidden="true">zsh</span></div>
+      <div class="term-body" id="term"></div>
     </div>
   </section>
 
-  <!-- Profile section -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title en">Professional Profile</h2>
-      <h2 class="section-title es">Perfil Profesional</h2>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <p class="en">
-            Passionate about leading technology projects from vision to delivery, bringing cross-functional
-            teams together to create products that truly matter. With extensive experience integrating
-            advanced technology strategies to design products that combine efficiency, usability, and
-            measurable results. <br></br>
-          </p>
-          <p class="en">
-            My expertise spans user research, UX/UI design, data analytics, and AI-driven optimization,
-            backed by knowledge of platforms such as AWS, GitHub, and Google Analytics. <br></br>
-          </p>
-          <p class="en">
-            My focus is always on bridging technology and user experience to ensure that every solution
-            delivers tangible and lasting value.
-          </p>
-
-          <p class="es">
-            Apasionado por liderar proyectos tecnológicos desde la visión hasta la entrega, uniendo equipos
-            multifuncionales para crear productos que realmente importan. Con amplia experiencia
-            integrando estrategias tecnológicas avanzadas para diseñar productos que combinan eficiencia,
-            usabilidad y resultados medibles. <br></br>
-          </p>
-          <p class="es">
-            Mi conocimiento abarca desde investigación de usuarios y diseño UX/UI hasta analítica de datos
-            y optimización basada en IA, respaldado por el conocimiento de plataformas como AWS, GitHub
-            y Google Analytics. <br></br>
-          </p>
-          <p class="es">
-            Mi enfoque está siempre en unir tecnología y experiencia de usuario para garantizar que cada
-            solución entregue un valor tangible y sostenido en el tiempo.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills section -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title en">Skills</h2>
-      <h2 class="section-title es">Habilidades</h2>
-
-      <div class="skills-container">
-        <span class="skill">Agile methodologies</span>
-        <span class="skill">Development process optimization</span>
-        <span class="skill">Frontend and backend system integration</span>
-        <span class="skill">User analysis and research</span>
-        <span class="skill">New product launch</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience section -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title en">Experience</h2>
-      <h2 class="section-title es">Experiencia</h2>
-
-      <div class="timeline">
-        <!-- Floloop Experience -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-title">Software Project Manager</h3>
-              <div class="timeline-company">Floloop</div>
-              <div class="timeline-location">Las Vegas, Nevada, USA</div>
-            </div>
-            <div class="timeline-date">
-              <span class="en">Nov 2024 - Present</span>
-              <span class="es">Nov 2024 - Presente</span>
-            </div>
-          </div>
-
-          <div class="timeline-content">
-            <div class="en">
-              <div class="timeline-section-title">Responsibilities:</div>
-              <ul class="timeline-list">
-                <li>Lead the creation and enhancement of automation and growth tools that optimize business efficiency
-                  for our clients, with a focus on integrated platforms.</li>
-                <li>Define and execute the product roadmap from ideation to launch, ensuring that new features meet
-                  market demands and specific client needs.</li>
-              </ul>
-
-              <div class="timeline-section-title">Achievements:</div>
-              <ul class="timeline-list">
-                <li>Gather user insights and client requirements.</li>
-                <li>Verify and validate that the web application meets specifications and functions correctly.</li>
-              </ul>
-            </div>
-
-            <div class="es">
-              <div class="timeline-section-title">Funciones:</div>
-              <ul class="timeline-list">
-                <li>Liderar la creación y mejora de herramientas de automatización y crecimiento que optimicen la
-                  eficiencia de los negocios de nuestros clientes, con un enfoque en plataformas integradas.</li>
-                <li>Definir y ejecutar la hoja de ruta de producto desde la ideación hasta el lanzamiento, garantizando
-                  que las nuevas funcionalidades respondan a las demandas del mercado y las necesidades específicas de
-                  los clientes.</li>
-              </ul>
-
-              <div class="timeline-section-title">Logros:</div>
-              <ul class="timeline-list">
-                <li>Recopilo información de uso y necesidades de nuestros clientes.</li>
-                <li>Verifico y valido que la aplicación web cumpla con los requisitos y funcione correctamente.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Wava Experience -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-title">Product Manager</h3>
-              <div class="timeline-company">Wava</div>
-              <div class="timeline-location">Bogotá, Colombia</div>
-            </div>
-            <div class="timeline-date">
-              <span class="en">Mar 2022 - Sep 2024</span>
-              <span class="es">Mar 2022 - Sep 2024</span>
-            </div>
-          </div>
-
-          <div class="timeline-content">
-            <div class="en">
-              <div class="timeline-section-title">Responsibilities:</div>
-              <ul class="timeline-list">
-                <li>Collect and analyze user metrics to identify improvement opportunities, drive tool adoption, and
-                  ensure maximum value in every update.</li>
-                <li>Coordinate with technology, sales, and marketing teams to launch highly scalable products while
-                  keeping customer satisfaction a top priority.</li>
-              </ul>
-
-              <div class="timeline-section-title">Achievements:</div>
-              <ul class="timeline-list">
-                <li>Designed the web user experience for the payment process.</li>
-                <li>Defined the design system for the entire web payment experience.</li>
-                <li>Ensured the integration of Stripe, Nequi, and DaviPlata as available payment methods.</li>
-              </ul>
-            </div>
-
-            <div class="es">
-              <div class="timeline-section-title">Funciones:</div>
-              <ul class="timeline-list">
-                <li>Recopilar y analizar métricas de usuario para identificar oportunidades de mejora, impulsar la
-                  adopción de herramientas y asegurar el máximo valor en cada actualización.</li>
-                <li>Coordinar con equipos de tecnología, ventas y marketing para lanzar productos altamente escalables y
-                  mantener la satisfacción del cliente en primer lugar.</li>
-              </ul>
-
-              <div class="timeline-section-title">Logros:</div>
-              <ul class="timeline-list">
-                <li>Elaboré la experiencia de usuario web para el proceso de pago.</li>
-                <li>Definí el sistema de diseño para toda la experiencia de pago web.</li>
-                <li>Aseguré la integración de Stripe, Nequi y DaviPlata como medios de pago disponibles.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cosmic Experience -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-title">Product Manager</h3>
-              <div class="timeline-company">Cosmic</div>
-              <div class="timeline-location">Bogotá, Colombia</div>
-            </div>
-            <div class="timeline-date">
-              <span class="en">Feb 2018 - Aug 2021</span>
-              <span class="es">Feb 2018 - Ago 2021</span>
-            </div>
-          </div>
-
-          <div class="timeline-content">
-            <div class="en">
-              <div class="timeline-section-title">Responsibilities:</div>
-              <ul class="timeline-list">
-                <li>Oversee the integration of hardware and software in electric vehicle fleets.</li>
-                <li>Analyze operational data to optimize routes and vehicle availability.</li>
-                <li>Implement strategies to enhance the user experience in mobile apps.</li>
-              </ul>
-
-              <div class="timeline-section-title">Achievements:</div>
-              <ul class="timeline-list">
-                <li>Oversaw the release of user and logistics apps on the Play Store and App Store.</li>
-                <li>Designed the mobile and web user experience for the apps and the admin panel.</li>
-                <li>Coordinated the launch of fleets in Colombia, Peru, Argentina, Chile, Canada, Italy, and Saudi
-                  Arabia.</li>
-              </ul>
-            </div>
-
-            <div class="es">
-              <div class="timeline-section-title">Funciones:</div>
-              <ul class="timeline-list">
-                <li>Supervisar la integración de hardware y software en las flotas de vehículos eléctricos.</li>
-                <li>Analizar los datos operativos para optimizar las rutas y disponibilidad de vehículos.</li>
-                <li>Implementar estrategias para mejorar la experiencia de usuario en las aplicaciones móviles.</li>
-              </ul>
-
-              <div class="timeline-section-title">Logros:</div>
-              <ul class="timeline-list">
-                <li>Supervisé la publicación de las apps de usuario y logística en la Play Store y la App Store.</li>
-                <li>Diseñé la experiencia de usuario móvil y web de las app y el panel de administración.</li>
-                <li>Coordiné el lanzamiento de las flotas en Colombia, Perú, Argentina, Chile, Canadá, Italia y Arabia
-                  Saudita.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- City of Eden Experience -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-title en">Design Engineer</h3>
-              <h3 class="timeline-title es">Ingeniero de diseño</h3>
-              <div class="timeline-company">City of Eden</div>
-              <div class="timeline-location">Bogotá, Colombia</div>
-            </div>
-            <div class="timeline-date">
-              <span class="en">Nov 2017 - Feb 2018</span>
-              <span class="es">Nov 2017 - Feb 2018</span>
-            </div>
-          </div>
-
-          <div class="timeline-content">
-            <div class="en">
-              <div class="timeline-section-title">Responsibilities:</div>
-              <ul class="timeline-list">
-                <li>Design and management of manufacturing operations.</li>
-                <li>Development and administration through computer-aided manufacturing (CAM).</li>
-                <li>Prototype production and specification development for product evaluation.</li>
-              </ul>
-
-              <div class="timeline-section-title">Achievements:</div>
-              <ul class="timeline-list">
-                <li>Coordinated the manufacturing of equipment for Motorola's headquarters in Israel.</li>
-                <li>Developed the prototype of a product currently in the patent process in the U.S.</li>
-              </ul>
-            </div>
-
-            <div class="es">
-              <div class="timeline-section-title">Funciones:</div>
-              <ul class="timeline-list">
-                <li>Diseño y dirección de operaciones de manufactura.</li>
-                <li>Desarrollo y gestión mediante fabricación asistida por computador (CAM).</li>
-                <li>Producción de prototipos y especificaciones para la evaluación de productos.</li>
-              </ul>
-
-              <div class="timeline-section-title">Logros:</div>
-              <ul class="timeline-list">
-                <li>Coordiné la fabricación de equipos destinados a la sede de Motorola en Israel.</li>
-                <li>Desarrollé el prototipo de un producto que se encuentra en proceso de patente en EE. UU.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education section -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title en">Education & Certifications</h2>
-      <h2 class="section-title es">Educación y Certificaciones</h2>
-
-      <div class="education-container">
-        <!-- Chatbot development with OpenAI -->
-        <div class="education-item">
-          <a href="https://platzi.com/p/Rieux/curso/8022-openai-api-23/diploma/detalle/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Feb 2025</span>
-            <span class="es">Feb 2025</span>
-          </div>
-          <h3 class="education-title en">Chatbot development with OpenAI</h3>
-          <h3 class="education-title es">Desarrollo de Chatbots con OpenAI</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.34,24c-.96,0-1.86-.38-2.54-1.05L2.43,14.55c-.68-.69-1.05-1.59-1.05-2.56s.38-1.87,1.05-2.55L10.83,1.05c.69-.68,1.58-1.05,2.54-1.05h0c.96,0,1.86.38,2.54,1.06l5.66,5.72c.68.69,1.04,1.58,1.04,2.56s-.38,1.87-1.06,2.55l-5.33,5.3-2.67-2.7,5.19-5.17-5.39-5.44L5.24,12l8.1,8.13,2.89-2.91,2.68,2.67-3.02,3.05c-.68.69-1.58,1.06-2.55,1.06Z"
-                fill="#0ae98a" />
-            </svg>
-            Platzi
-          </div>
-        </div>
-
-        <!-- AI Agents -->
-        <div class="education-item">
-          <a href="https://platzi.com/p/Rieux/curso/10794-agentes-ai/diploma/detalle/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Feb 2025</span>
-            <span class="es">Feb 2025</span>
-          </div>
-          <h3 class="education-title en">AI Agents</h3>
-          <h3 class="education-title es">Agentes IA</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.34,24c-.96,0-1.86-.38-2.54-1.05L2.43,14.55c-.68-.69-1.05-1.59-1.05-2.56s.38-1.87,1.05-2.55L10.83,1.05c.69-.68,1.58-1.05,2.54-1.05h0c.96,0,1.86.38,2.54,1.06l5.66,5.72c.68.69,1.04,1.58,1.04,2.56s-.38,1.87-1.06,2.55l-5.33,5.3-2.67-2.7,5.19-5.17-5.39-5.44L5.24,12l8.1,8.13,2.89-2.91,2.68,2.67-3.02,3.05c-.68.69-1.58,1.06-2.55,1.06Z"
-                fill="#0ae98a" />
-            </svg>
-            Platzi
-          </div>
-        </div>
-
-        <!-- Tableau -->
-        <div class="education-item">
-          <a href="https://platzi.com/p/Rieux/curso/2197-tableau/diploma/detalle/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Oct 2024</span>
-            <span class="es">Oct 2024</span>
-          </div>
-          <h3 class="education-title en">Tableau: Data Visualization and Storytelling for Business</h3>
-          <h3 class="education-title es">Tableau: Visualización de Datos y Storytelling para Negocios</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.34,24c-.96,0-1.86-.38-2.54-1.05L2.43,14.55c-.68-.69-1.05-1.59-1.05-2.56s.38-1.87,1.05-2.55L10.83,1.05c.69-.68,1.58-1.05,2.54-1.05h0c.96,0,1.86.38,2.54,1.06l5.66,5.72c.68.69,1.04,1.58,1.04,2.56s-.38,1.87-1.06,2.55l-5.33,5.3-2.67-2.7,5.19-5.17-5.39-5.44L5.24,12l8.1,8.13,2.89-2.91,2.68,2.67-3.02,3.05c-.68.69-1.58,1.06-2.55,1.06Z"
-                fill="#0ae98a" />
-            </svg>
-            Platzi
-          </div>
-        </div>
-
-        <!-- SQL -->
-        <div class="education-item">
-          <a href="https://platzi.com/p/Rieux/curso/9873-db-sql/diploma/detalle/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Jul 2024</span>
-            <span class="es">Jul 2024</span>
-          </div>
-          <h3 class="education-title en">Databases with SQL</h3>
-          <h3 class="education-title es">Bases de Datos con SQL</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.34,24c-.96,0-1.86-.38-2.54-1.05L2.43,14.55c-.68-.69-1.05-1.59-1.05-2.56s.38-1.87,1.05-2.55L10.83,1.05c.69-.68,1.58-1.05,2.54-1.05h0c.96,0,1.86.38,2.54,1.06l5.66,5.72c.68.69,1.04,1.58,1.04,2.56s-.38,1.87-1.06,2.55l-5.33,5.3-2.67-2.7,5.19-5.17-5.39-5.44L5.24,12l8.1,8.13,2.89-2.91,2.68,2.67-3.02,3.05c-.68.69-1.58,1.06-2.55,1.06Z"
-                fill="#0ae98a" />
-            </svg>
-            Platzi
-          </div>
-        </div>
-
-        <!-- Google Data Studio -->
-        <div class="education-item">
-          <a href="https://platzi.com/p/Rieux/curso/1838-data-studio/diploma/detalle/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Jun 2024</span>
-            <span class="es">Jun 2024</span>
-          </div>
-          <h3 class="education-title en">Google Data Studio</h3>
-          <h3 class="education-title es">Google Data Studio</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.34,24c-.96,0-1.86-.38-2.54-1.05L2.43,14.55c-.68-.69-1.05-1.59-1.05-2.56s.38-1.87,1.05-2.55L10.83,1.05c.69-.68,1.58-1.05,2.54-1.05h0c.96,0,1.86.38,2.54,1.06l5.66,5.72c.68.69,1.04,1.58,1.04,2.56s-.38,1.87-1.06,2.55l-5.33,5.3-2.67-2.7,5.19-5.17-5.39-5.44L5.24,12l8.1,8.13,2.89-2.91,2.68,2.67-3.02,3.05c-.68.69-1.58,1.06-2.55,1.06Z"
-                fill="#0ae98a" />
-            </svg>
-            Platzi
-          </div>
-        </div>
-
-        <!-- Metrics -->
-        <div class="education-item">
-          <a href="https://platzi.com/p/Rieux/curso/2294-dashboards-startups/diploma/detalle/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Apr 2024</span>
-            <span class="es">Abr 2024</span>
-          </div>
-          <h3 class="education-title en">Metrics and Dashboards for Startups</h3>
-          <h3 class="education-title es">Métricas y Dashboards para Startups</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.34,24c-.96,0-1.86-.38-2.54-1.05L2.43,14.55c-.68-.69-1.05-1.59-1.05-2.56s.38-1.87,1.05-2.55L10.83,1.05c.69-.68,1.58-1.05,2.54-1.05h0c.96,0,1.86.38,2.54,1.06l5.66,5.72c.68.69,1.04,1.58,1.04,2.56s-.38,1.87-1.06,2.55l-5.33,5.3-2.67-2.7,5.19-5.17-5.39-5.44L5.24,12l8.1,8.13,2.89-2.91,2.68,2.67-3.02,3.05c-.68.69-1.58,1.06-2.55,1.06Z"
-                fill="#0ae98a" />
-            </svg>
-            Platzi
-          </div>
-        </div>
-
-        <!-- Looker -->
-        <div class="education-item">
-          <a href="https://platzi.com/p/Rieux/curso/8046-reportes-looker/diploma/detalle/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Feb 2024</span>
-            <span class="es">Feb 2024</span>
-          </div>
-          <h3 class="education-title en">Social Media Report Generation with Looker Studio</h3>
-          <h3 class="education-title es">Generación de Reportes de Redes Sociales con Looker Studio</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.34,24c-.96,0-1.86-.38-2.54-1.05L2.43,14.55c-.68-.69-1.05-1.59-1.05-2.56s.38-1.87,1.05-2.55L10.83,1.05c.69-.68,1.58-1.05,2.54-1.05h0c.96,0,1.86.38,2.54,1.06l5.66,5.72c.68.69,1.04,1.58,1.04,2.56s-.38,1.87-1.06,2.55l-5.33,5.3-2.67-2.7,5.19-5.17-5.39-5.44L5.24,12l8.1,8.13,2.89-2.91,2.68,2.67-3.02,3.05c-.68.69-1.58,1.06-2.55,1.06Z"
-                fill="#0ae98a" />
-            </svg>
-            Platzi
-          </div>
-        </div>
-
-        <!-- GitHub -->
-        <div class="education-item">
-          <a href="https://platzi.com/p/Rieux/curso/1557-git-github/diploma/detalle/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Jan 2024</span>
-            <span class="es">Ene 2024</span>
-          </div>
-          <h3 class="education-title en">Git & GitHub</h3>
-          <h3 class="education-title es">Git & GitHub</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.34,24c-.96,0-1.86-.38-2.54-1.05L2.43,14.55c-.68-.69-1.05-1.59-1.05-2.56s.38-1.87,1.05-2.55L10.83,1.05c.69-.68,1.58-1.05,2.54-1.05h0c.96,0,1.86.38,2.54,1.06l5.66,5.72c.68.69,1.04,1.58,1.04,2.56s-.38,1.87-1.06,2.55l-5.33,5.3-2.67-2.7,5.19-5.17-5.39-5.44L5.24,12l8.1,8.13,2.89-2.91,2.68,2.67-3.02,3.05c-.68.69-1.58,1.06-2.55,1.06Z"
-                fill="#0ae98a" />
-            </svg>
-            Platzi
-          </div>
-        </div>
-
-        <!-- User Research -->
-        <div class="education-item">
-          <a href="https://platzi.com/p/Rieux/curso/1742-user-research/diploma/detalle/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Nov 2022</span>
-            <span class="es">Nov 2022</span>
-          </div>
-          <h3 class="education-title en">User Research: Techniques for Effective Investigation</h3>
-          <h3 class="education-title es">User Research: Técnicas para una Investigación Efectiva</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.34,24c-.96,0-1.86-.38-2.54-1.05L2.43,14.55c-.68-.69-1.05-1.59-1.05-2.56s.38-1.87,1.05-2.55L10.83,1.05c.69-.68,1.58-1.05,2.54-1.05h0c.96,0,1.86.38,2.54,1.06l5.66,5.72c.68.69,1.04,1.58,1.04,2.56s-.38,1.87-1.06,2.55l-5.33,5.3-2.67-2.7,5.19-5.17-5.39-5.44L5.24,12l8.1,8.13,2.89-2.91,2.68,2.67-3.02,3.05c-.68.69-1.58,1.06-2.55,1.06Z"
-                fill="#0ae98a" />
-            </svg>
-            Platzi
-          </div>
-        </div>
-
-        <!-- Design Systems -->
-        <div class="education-item">
-          <a href="https://platzi.com/p/Rieux/curso/1420-sistemas-diseno/diploma/detalle/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Jan 2022</span>
-            <span class="es">Ene 2022</span>
-          </div>
-          <h3 class="education-title en">Design Systems</h3>
-          <h3 class="education-title es">Sistemas de diseño</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.34,24c-.96,0-1.86-.38-2.54-1.05L2.43,14.55c-.68-.69-1.05-1.59-1.05-2.56s.38-1.87,1.05-2.55L10.83,1.05c.69-.68,1.58-1.05,2.54-1.05h0c.96,0,1.86.38,2.54,1.06l5.66,5.72c.68.69,1.04,1.58,1.04,2.56s-.38,1.87-1.06,2.55l-5.33,5.3-2.67-2.7,5.19-5.17-5.39-5.44L5.24,12l8.1,8.13,2.89-2.91,2.68,2.67-3.02,3.05c-.68.69-1.58,1.06-2.55,1.06Z"
-                fill="#0ae98a" />
-            </svg>
-            Platzi
-          </div>
-        </div>
-
-        <!-- Figma -->
-        <div class="education-item">
-          <a href="https://platzi.com/p/Rieux/curso/2582-figma-avanzado/diploma/detalle/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Dec 2021</span>
-            <span class="es">Dic 2021</span>
-          </div>
-          <h3 class="education-title en">Figma: Design and Prototyping</h3>
-          <h3 class="education-title es">Figma Avanzado</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.34,24c-.96,0-1.86-.38-2.54-1.05L2.43,14.55c-.68-.69-1.05-1.59-1.05-2.56s.38-1.87,1.05-2.55L10.83,1.05c.69-.68,1.58-1.05,2.54-1.05h0c.96,0,1.86.38,2.54,1.06l5.66,5.72c.68.69,1.04,1.58,1.04,2.56s-.38,1.87-1.06,2.55l-5.33,5.3-2.67-2.7,5.19-5.17-5.39-5.44L5.24,12l8.1,8.13,2.89-2.91,2.68,2.67-3.02,3.05c-.68.69-1.58,1.06-2.55,1.06Z"
-                fill="#0ae98a" />
-            </svg>
-            Platzi
-          </div>
-        </div>
-
-        <!-- Bachelor's Degree -->
-        <div class="education-item">
-          <a href="https://uptc.edu.co/" target="_blank">
-            <i class="education-icon fas fa-external-link-alt"></i>
-          </a>
-          <div class="education-date">
-            <span class="en">Abr 2015</span>
-            <span class="es">Abr 2015</span>
-          </div>
-          <h3 class="education-title en">Bachelor's Degree in Electromechanical Engineering</h3>
-          <h3 class="education-title es">Pregrado Ingeniería electromecánica</h3>
-          <div class="education-institution">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M14.01,1.98l9.57,5.02c.55.29.57,1.07.02,1.38l-1.62.93c-.38.22-.86.08-1.08-.29-.22-.38-.08-.86.29-1.08l.37-.21L13.28,3.38c-.77-.4-1.69-.42-2.47-.04l-.09.04L2.47,7.71l2.23,1.19c.24.13.39.37.41.64v.06s0,9.06,0,9.06c0,.23.13.43.33.54h0s.2.11.2.11c2.11,1.06,4.21,1.6,6.28,1.63h.21c2.2,0,4.34-.57,6.42-1.72.19-.11.31-.31.31-.53v-7.77l-4.73,2.51c-1.22.64-2.67.67-3.91.07l-.11-.06-3.89-2.01c-.39-.2-.54-.68-.34-1.06.2-.39.68-.54,1.06-.34l3.89,2.01c.8.42,1.76.41,2.55-.01l5.88-3.12c.53-.28,1.16.1,1.16.7v9.09c0,.8-.43,1.53-1.13,1.91-2.31,1.28-4.71,1.92-7.18,1.92s-4.95-.64-7.42-1.92h-.01s-.07-.04-.07-.04c-.66-.37-1.07-1.06-1.1-1.81v-.09s0-8.58,0-8.58l-3.12-1.67c-.54-.29-.55-1.05-.04-1.36l.05-.03L9.99,1.98c1.26-.66,2.76-.66,4.02,0h0ZM23.21,10.87c.44,0,.79.35.79.79v4.87c0,.44-.35.79-.79.79s-.79-.35-.79-.79v-4.87c0-.44.35-.79.79-.79Z"
-                fill="#0affff" />
-            </svg>
-            UPTC
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Scroll to Top of the page -->
-  <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
-    <i class="fa-solid fa-chevron-up"></i>
-  </button>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>
-        <span class="en">Made with 💛 by Rieux. © 2025 All rights reserved.</span>
-        <span class="es">Hecho con 💛 por Rieux. © 2025 Todos los derechos reservados.</span>
-      </p>
-    </div>
-  </footer>
-  <div id="theme-fade"></div>
-  <script src="javascript/scripts.js" defer></script>
+  <footer class="foot" data-t="footer"></footer>
+</div>
+<p class="sr" id="live" aria-live="polite"></p>
 </body>
-
 </html>
